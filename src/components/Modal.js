@@ -23,7 +23,8 @@ let Modal = () => {
     let label = labelField.value;
 
     let urlRegex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g;
-    let uriRegex = /data:image\/([a-zA-Z]*);base64,([^\"]*)/g;
+    //let uriRegex = /data:image\/([a-zA-Z]*);base64,([^\"]*)/g;
+    let uriRegex = /data:image\/([a-zA-Z]*);base64/g;
 
     if (urlRegex.test(link) || uriRegex.test(link)) {
 
@@ -62,6 +63,8 @@ let Modal = () => {
         <form className='modalHidden' ref={modal} id='modal'>
             <input type='text' name='label' placeholder='Label' id='labelField' required/>
             <input type='text' name='pictureURL' placeholder='Link' id='linkField'/>
+            <p>OR</p>
+            <input type='file' name='file' />
             <div><span id='cancelModal' onClick={closeModal}>Cancel</span> <button onClick={handleSubmit}>Submit</button></div>
         </form>
     </div>
