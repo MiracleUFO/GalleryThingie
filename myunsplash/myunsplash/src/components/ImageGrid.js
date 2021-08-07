@@ -10,14 +10,16 @@ function ImageGrid() {
                 className={'gallery'}
                 disableImagesLoaded={true}
                 updateOnEachImageLoad={true}
-                >
-                <img src={aki}/>
-                <img src={and}/>
-                <img src={asc}/>
-                <img src={asc}/>
-                <img src={asc}/>
+            >
+                <img src={aki} alt='' />
+                <img src={and} alt='' />
+                <img src={asc} alt='' />
+                <img src={asc} alt='' />
+                <img src={asc}alt=''  />
+                <img src={and} alt='' />
+                <img src={asc} alt='' />                
             </Masonry>
   );
 }
-
+   
 export default ImageGrid;
